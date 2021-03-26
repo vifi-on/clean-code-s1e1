@@ -11,7 +11,7 @@
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.querySelector(".btn--add");//first button
 var todoList=document.getElementById("todoList");//ul of #todoList
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+var completedList=document.getElementById("completedList");//completedList
 
 
 //New task list item
@@ -129,9 +129,9 @@ var deleteTask=function(){
 var taskCompleted=function(){
     console.log("Complete Task...");
 
-    //Append the task list item to the #completed-tasks
+    //Append the task list item to the #completedList
     var listItem=this.parentNode;
-    completedTasksHolder.appendChild(listItem);
+    completedList.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
 }
@@ -189,10 +189,10 @@ for (var i=0; i<todoList.children.length;i++){
 
 
 
-//cycle over completedTasksHolder ul list items
-for (var i=0; i<completedTasksHolder.children.length;i++){
+//cycle over completedList ul list items
+for (var i=0; i<completedList.children.length;i++){
     //bind events to list items chldren(tasksIncompleted)
-    bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
+    bindTaskEvents(completedList.children[i],taskIncomplete);
 }
 
 
