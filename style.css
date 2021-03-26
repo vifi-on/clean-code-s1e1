@@ -160,15 +160,15 @@ ul#completed-tasks label {
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.input:not(.check) {
   display: none;
 }
 
-ul li.editMode input[type=text] {
+.editMode .input:not(.check) {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.editMode .label {
   display: none;
 }
