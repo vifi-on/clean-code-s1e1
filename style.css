@@ -43,7 +43,7 @@ body {
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.add__wrapper {
   display: flex;
 }
 
