@@ -10,6 +10,21 @@ body {
   font-family: Lato, sans-serif;
 }
 
+/* Reset styles */
+ul {
+  margin: 0;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+button {
+  outline: none;
+}
+
 .container {
   width: 500px;
   margin: 0 auto;
@@ -46,21 +61,6 @@ body {
 .add__wrapper {
   display: flex;
   margin-top: 20px;
-}
-
-ul {
-  margin: 0;
-  padding: 0px;
-}
-
-li,
-h3 {
-  list-style: none;
-}
-
-input,
-button {
-  outline: none;
 }
 
 .btn {
