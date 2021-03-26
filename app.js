@@ -10,7 +10,7 @@
 
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.querySelector(".btn--add");//first button
-var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
+var todoList=document.getElementById("todoList");//ul of #todoList
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
 
@@ -54,7 +54,7 @@ var createNewTaskElement=function(taskString){
 
     deleteButton.className="btn btn--delete";
     deleteButtonImg.classList.add("btn__img")
-    deleteButtonImg.src='remove.svg';
+    deleteButtonImg.src="remove.svg";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -75,8 +75,8 @@ var addTask=function(){
     if (!taskInput.value) return;
     var listItem=createNewTaskElement(taskInput.value);
 
-    //Append listItem to incompleteTaskHolder
-    incompleteTaskHolder.appendChild(listItem);
+    //Append listItem to todoList
+    todoList.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
 
     taskInput.value="";
@@ -141,9 +141,9 @@ var taskIncomplete=function(){
     console.log("Incomplete Task...");
 //Mark task as incomplete.
     //When the checkbox is unchecked
-    //Append the task list item to the #incompleteTasks.
+    //Append the task list item to the #todoList.
     var listItem=this.parentNode;
-    incompleteTaskHolder.appendChild(listItem);
+    todoList.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }
 
@@ -178,12 +178,12 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     checkBox.onchange=checkBoxEventHandler;
 }
 
-//cycle over incompleteTaskHolder ul list items
+//cycle over todoList ul list items
 //for each list item
-for (var i=0; i<incompleteTaskHolder.children.length;i++){
+for (var i=0; i<todoList.children.length;i++){
 
     //bind events to list items chldren(tasksCompleted)
-    bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
+    bindTaskEvents(todoList.children[i],taskCompleted);
 }
 
 
