@@ -43,6 +43,7 @@ button {
   font-family: Fantasy, cursive;
 }
 
+
 .task {
   width: 56%;
   display: inline-block;
@@ -120,7 +121,7 @@ li>* {
   vertical-align: middle;
 }
 
-li>input[type="checkbox"] {
+.check {
   margin: 0 10px;
 }
 
