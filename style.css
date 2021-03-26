@@ -5,6 +5,11 @@ body {
   font-family: Lato, sans-serif;
 }
 
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
 .aaa {
   width: 500px;
   margin: 0 auto;
@@ -24,12 +29,6 @@ body {
   .aaa {
     text-align: center;
   }
-}
-
-.centered-main-page-element {
-  display: block;
-  width: 500px;
-  margin: 0 auto 0;
 }
 
 .task {
