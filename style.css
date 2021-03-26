@@ -30,9 +30,10 @@ button {
   margin: 0 auto;
 }
 
+/* button styles */
 .btn {
   background: none;
-  border: 0px;
+  border: none;
   color: #888888;
   font-size: 15px;
   width: 60px;
@@ -48,6 +49,17 @@ button {
   color: #0fc57c;
 }
 
+.btn__img {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform .2s ease-in;
+}
+
+.btn__img:hover {
+  transform: rotateZ(0);
+}
+
+/* Heading */
 .title {
   color: #333333;
   font-weight: 700;
@@ -70,22 +82,15 @@ button {
 .header__link {
   font-family: Fantasy, cursive;
 }
-/* end Header */
 
 /* New Task */
 .task {
-  width: 56%;
-  display: inline-block;
   flex-grow: 1;
 }
 
 .add__wrapper {
   display: flex;
   margin-top: 20px;
-}
-
-.add__input {
-  width: 318px;
 }
 
 .add__input,
@@ -124,31 +129,6 @@ button {
 .label {
   padding-left: 10px;
   font-size: 18px;
-  width: 226px;
-}
-
-.input:not(.check) {
-  width: 226px;
-}
-
-.btn--delete:hover {
-  color: #cf2323;
-}
-
-.btn__img {
-  height: 2em;
-  transform: rotateZ(45deg);
-  transition: transform .2s ease-in;
-}
-
-.btn__img:hover {
-  transform: rotateZ(0);
-}
-
-/* Completed */
-ul#completedList label {
-  text-decoration: line-through;
-  color: #888888;
 }
 
 /* Edit Task */
@@ -158,9 +138,14 @@ ul#completedList label {
 
 .editMode .input:not(.check) {
   display: inline-block;
-  width: 224px;
 }
 
 .editMode .label {
   display: none;
+}
+
+/* Completed */
+.complet .label {
+  text-decoration: line-through;
+  color: #888888;
 }
