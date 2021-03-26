@@ -84,9 +84,10 @@ button {
   margin-top: 20px;
 }
 
+.add__input {
+  width: 318px;
+}
 
-
-/* Heading */
 .add__input,
 .input {
   margin: 0;
@@ -105,13 +106,8 @@ button {
   color: #333333;
 }
 
-/* New Task */
-input#new-task {
-  width: 318px;
-}
-
 /* Task list */
-li {
+.list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eeeeee;
@@ -121,22 +117,17 @@ li {
   align-items: center;
 }
 
-li>* {
-  vertical-align: middle;
-}
-
 .check {
   margin: 0 10px;
 }
 
-li>label {
+.label {
   padding-left: 10px;
-  box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li>input[type="text"] {
+.input:not(.check) {
   width: 226px;
 }
 
@@ -155,7 +146,7 @@ li>input[type="text"] {
 }
 
 /* Completed */
-ul#completed-tasks label {
+ul#completedList label {
   text-decoration: line-through;
   color: #888888;
 }
