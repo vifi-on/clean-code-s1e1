@@ -87,7 +87,8 @@ button {
 
 
 /* Heading */
-input[type="text"] {
+.add__input,
+.input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -100,7 +101,7 @@ input[type="text"] {
   color: #888888;
 }
 
-input[type="text"]:focus {
+.input:focus {
   color: #333333;
 }
 
